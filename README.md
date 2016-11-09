@@ -21,7 +21,7 @@
 
 1. Käytä funktiota get-in noutamaan arvo `:aarre` arvosta:
 
-```
+```clojure
 {:kuvaus "luolasto"
  :risteys [{:sisalto :hirvio}
            nil
@@ -37,7 +37,7 @@
 
 1. tee funktio `small?` joka palauttaa `true` luvuille alle 100
 1. tee funktio `message!` jolla on kolme eri tapausta:
-```
+```clojure
 (message! :boink) ==> "Boink!"
 (message! :pig)   ==> "oink"
 (message! :ping)  ==> "pong"
@@ -57,7 +57,7 @@
 
 1. käytä funktiota `update-in` kasvattamaan numeroa 3 yhdellä alla
    olevassa rakenteessa:
-```
+```clojure
 {:shops [:shop-1]
  :customers [{:id "Pekka"
               :account {:saldo 3}}]}
@@ -66,7 +66,7 @@
 ...
 
 1. haastava: käytä `reduce`-funktiota yhdistämään vektori mappeja yhdeksi:
-```
+```clojure
 (combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
    ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
 ```
