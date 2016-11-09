@@ -1,6 +1,31 @@
 # clojure-harjoituksia
 
-## syntaksi
+Kasa yksinkertaisia harjoituksia joilla pääset alkuun Clojuren kanssa.
+
+## näin pääset koodaamaan
+
+Tarvitset harjoituksia tehdäksesi clojure-ympäristön. Tähän on pari eri vaihtoehtoa:
+
+- Voit tehdä tehtäviä netissä: http://tryclj.com
+- Nightcode on helppo ja toimiva clojure-IDE jonka voit asentaa
+  Windowsille, OS X:lle tai Linuxille: https://sekao.net/nightcode/
+- Voit vain ladata clojuren jar-muodossa virallisilta sivuilta
+  (http://clojure.org) ja ajaa sitä vaikka Linuxissa näin:
+  
+  ```
+  rlwrap java -jar clojure-1.8.0.jar
+  ```
+
+## hyödyllisiä materiaaleja
+
+Tarvitset harjoitusten tekemiseen seuraavia materiaaleja:
+
+- http://clojuredocs.org -- clojure-funktioitten dokumentaatio ja esimerkkejä
+- http://clojure.org/reference -- pitempää dokumentaatiota joka selittää clojure-käsitteitä
+
+## harjoitukset
+
+### syntaksi
 
 1. laske `(3+4/5)*6`
 1. kutsu funktiota `get` argumenteilla `"ciao"` ja `1`
@@ -33,7 +58,7 @@
 
 1. TODO
 
-## kontrollirakenteet
+### kontrollirakenteet
 
 1. tee funktio `small?` joka palauttaa `true` luvuille alle 100
 1. tee funktio `message!` jolla on kolme eri tapausta:
@@ -48,7 +73,7 @@
 1. toteuta funktio `message!` uudelleen käyttäen `cond`-rakennetta
 1. toteuta funktio `message!` uudelleen käyttäen `case`-rakennetta
 
-## funktionaalista
+### funktionaalista ohjelmointia
 
 1. kasvata vektorin `[4 7 9 10]` kaikkia lukuja yhdellä. Käytä
    `map`-funktiota. Vihje: funktio `inc` kasvattaa lukua yhdellä!
@@ -73,7 +98,7 @@
       ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
    ```
 
-## rinnakkaisuutta ja transaktioita
+### rinnakkaisuutta ja transaktioita
 
 1. määrittele atomi `my-atom` joka sisältää arvon `4`
 1. hae `my-atom`in nykyinen arvo operaattorilla `@`
@@ -88,6 +113,6 @@
    Huom: joudut käyttämään myös makroa `dosync`
 1. päivitä `my-ref` arvoon 6 käyttämällä funktiota `alter`
 
-## lopuksi
+### lopuksi
 
 Vähän hankalampia tehtäviä tarjolla osoitteessa http://4clojure.com
