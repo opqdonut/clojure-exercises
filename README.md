@@ -21,27 +21,29 @@
 
 1. Käytä funktiota get-in noutamaan arvo `:aarre` arvosta:
 
-```clojure
-{:kuvaus "luolasto"
- :risteys [{:sisalto :hirvio}
-           nil
-           {:sisalto [:hely :aarre]}]}
-```
+   ```clojure
+   {:kuvaus "luolasto"
+    :risteys [{:sisalto :hirvio}
+              nil
+              {:sisalto [:hely :aarre]}]}
+   ```
 
 1. tee funktio hello joka toimii näin: `(hello) ==> "hello!"`
 1. tee funktio tupla joka toimii näin: `(tupla 5) ==> 10, (tupla 1) ==> 2`
 
-...
+1. TODO
 
 ## kontrollirakenteet
 
 1. tee funktio `small?` joka palauttaa `true` luvuille alle 100
 1. tee funktio `message!` jolla on kolme eri tapausta:
-```clojure
-(message! :boink) ==> "Boink!"
-(message! :pig)   ==> "oink"
-(message! :ping)  ==> "pong"
-```
+
+   ```clojure
+   (message! :boink) ==> "Boink!"
+   (message! :pig)   ==> "oink"
+   (message! :ping)  ==> "pong"
+   ```
+
 1. toteuta funktio `message!` uudelleen käyttäen `if`-rakennetta
 1. toteuta funktio `message!` uudelleen käyttäen `cond`-rakennetta
 1. toteuta funktio `message!` uudelleen käyttäen `case`-rakennetta
@@ -53,23 +55,23 @@
 1. tee sama kuin äsken, mutta jätä jäljelle vain parilliset luvut.
    Käytä funktioita `filter` ja `even?`
 
-...
+1. TODO
 
 1. käytä funktiota `update-in` kasvattamaan numeroa 3 yhdellä alla
    olevassa rakenteessa:
-```clojure
-{:shops [:shop-1]
- :customers [{:id "Pekka"
-              :account {:saldo 3}}]}
-```
+   ```clojure
+   {:shops [:shop-1]
+    :customers [{:id "Pekka"
+                 :account {:saldo 3}}]}
+   ```
 
-...
+1. TODO
 
 1. haastava: käytä `reduce`-funktiota yhdistämään vektori mappeja yhdeksi:
-```clojure
-(combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
-   ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
-```
+   ```clojure
+   (combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
+      ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
+   ```
 
 ## rinnakkaisuutta ja transaktioita
 
