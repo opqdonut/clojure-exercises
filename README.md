@@ -35,50 +35,57 @@
 
 ## kontrollirakenteet
 
-1. tee funktio small? joka palauttaa true luvuille alle 100
-1. tee funktio message! jolla on kolme eri tapausta:
-    (message! :boink) ==> "Boink!"
-    (message! :pig)   ==> "oink"
-    (message! :ping)  ==> "pong"
-1. toteuta funktio message! uudelleen käyttäen if-rakennetta
-1. toteuta funktio message! uudelleen käyttäen cond-rakennetta
-1. toteuta funktio message! uudelleen käyttäen case-rakennetta
+1. tee funktio `small?` joka palauttaa `true` luvuille alle 100
+1. tee funktio `message!` jolla on kolme eri tapausta:
+```
+(message! :boink) ==> "Boink!"
+(message! :pig)   ==> "oink"
+(message! :ping)  ==> "pong"
+```
+1. toteuta funktio `message!` uudelleen käyttäen `if`-rakennetta
+1. toteuta funktio `message!` uudelleen käyttäen `cond`-rakennetta
+1. toteuta funktio `message!` uudelleen käyttäen `case`-rakennetta
 
 ## funktionaalista
 
-1. kasvata vektorin [4 7 9 10] kaikkia lukuja yhdellä. Käytä
-   map-funktiota. Vihje: funktio inc kasvattaa lukua yhdellä!
+1. kasvata vektorin `[4 7 9 10]` kaikkia lukuja yhdellä. Käytä
+   `map`-funktiota. Vihje: funktio `inc` kasvattaa lukua yhdellä!
 1. tee sama kuin äsken, mutta jätä jäljelle vain parilliset luvut.
-   Käytä funktioita filter ja even?
+   Käytä funktioita `filter` ja `even?`
 
 ...
 
-1. käytä funktiota update-in kasvattamaan numeroa 3 yhdellä alla
+1. käytä funktiota `update-in` kasvattamaan numeroa 3 yhdellä alla
    olevassa rakenteessa:
-    {:shops [:shop-1]
-     :customers [{:id "Pekka"
-                  :account {:saldo 3}}]}
+```
+{:shops [:shop-1]
+ :customers [{:id "Pekka"
+              :account {:saldo 3}}]}
+```
 
 ...
 
-1. haastava: käytä reduce-funktiota yhdistämään vektori mappeja yhdeksi:
-    (combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
-    ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
+1. haastava: käytä `reduce`-funktiota yhdistämään vektori mappeja yhdeksi:
+```
+(combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
+   ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
+```
 
 ## rinnakkaisuutta ja transaktioita
 
-1. määrittele atomi my-atom joka sisältää arvon 4
-1. hae my-atomin nykyinen arvo operaattorilla @
-1. päivitä my-atomin sisältämä arvo arvoon 5 käyttämällä funktiota
-   reset!
-1. hae my-atomin nykyinen arvo funktiolla deref
-1. päivitä my-atomin sisältämä arvo arvoon 6 käyttämällä funktiota
-   swap!
-1. määrittele ref my-ref joka sisältää arvon 4
-1. lue my-refin arvo
-1. päivitä my-refin arvo arvoon 5 käyttämällä funktiota ref-set
-   Huom: joudut käyttämään myös makroa dosync
-1. päivitä my-refin arvo arvoon 6 käyttämällä funktiota alter
+1. määrittele atomi `my-atom` joka sisältää arvon `4`
+1. hae `my-atom`in nykyinen arvo operaattorilla `@`
+1. päivitä `my-atom` arvoon `5` käyttämällä funktiota
+   `reset!`
+1. hae `my-atom`in nykyinen arvo funktiolla `deref`
+1. päivitä `my-atom`in sisältämä arvo arvoon `6` käyttämällä funktiota
+   `swap!`
+1. määrittele ref `my-ref` joka sisältää arvon `4`
+1. lue `my-ref`in arvo
+1. päivitä `my-ref` arvoon `5` käyttämällä funktiota `ref-set`
+   Huom: joudut käyttämään myös makroa `dosync`
+1. päivitä `my-ref` arvoon 6 käyttämällä funktiota `alter`
 
-## 4clojure.com
-vähän hankalampia
+## lopuksi
+
+Vähän hankalampia tehtäviä tarjolla osoitteessa http://4clojure.com
