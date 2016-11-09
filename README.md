@@ -119,8 +119,6 @@ concurrency.
    NB! you'll have to use the `dosync` macro
 1. update `account` to the value `6` with the function `alter`
 
-1. TODO: `pmap`, futures?
-
 ### what next?
 
 The website http://4clojure.com has lots of clojure exercises!
