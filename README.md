@@ -58,12 +58,13 @@ To work on the exercises you'll need to refer to these materials:
 1. use `defn` to define a function hello that works like this: `(hello) ==> "hello!"`
 1. define a function `double` that works like this: `(double 5) ==> 10`, `(double 1) ==> 2`
 1. add a _docstring_ to the function `double`. Then show it using `(doc double)`.
-1. TODO
 
-### kontrollirakenteet
+1. TODO: let, loop
 
-1. tee funktio `small?` joka palauttaa `true` luvuille alle 100
-1. tee funktio `message!` jolla on kolme eri tapausta:
+### conditionals
+
+1. define a function `small?` that returns `true` for numbers under 100
+1. define a function `message!` that has three cases:
 
    ```clojure
    (message! :boink) ==> "Boink!"
@@ -71,50 +72,58 @@ To work on the exercises you'll need to refer to these materials:
    (message! :ping)  ==> "pong"
    ```
 
-1. toteuta funktio `message!` uudelleen käyttäen `if`-rakennetta
-1. toteuta funktio `message!` uudelleen käyttäen `cond`-rakennetta
-1. toteuta funktio `message!` uudelleen käyttäen `case`-rakennetta
+1. reimplement `message!` using the `if` structure
+1. reimplement `message!` using the `cond` structure
+1. reimplement `message!` using the `case` structure
 
-### funktionaalista ohjelmointia
+1. TODO?
 
-1. kasvata vektorin `[4 7 9 10]` kaikkia lukuja yhdellä. Käytä
-   `map`-funktiota. Vihje: funktio `inc` kasvattaa lukua yhdellä!
-1. tee sama kuin äsken, mutta jätä jäljelle vain parilliset luvut.
-   Käytä funktioita `filter` ja `even?`
+### functional programming?
+
+1. increment all the numbers in the vector `[4 7 9 10]` by one. Use
+   the `map` funktiota. Hint: the function `inc`
+1. do the same as in the previous exercise, but leave only the even results in the vector.
+   Use the functions `filter` and `even?`
 
 1. TODO
 
-1. käytä funktiota `update-in` kasvattamaan numeroa 3 yhdellä alla
-   olevassa rakenteessa:
+1. Use the funection `update-in` to change 3 into 4 in the value below:
    ```clojure
    {:shops [:shop-1]
     :customers [{:id "Pekka"
-                 :account {:saldo 3}}]}
+                 :account {:balance 3}}]}
    ```
 
 1. TODO
 
-1. haastava: käytä `reduce`-funktiota yhdistämään vektori mappeja yhdeksi:
+1. challenge! use the `reduce` function to combine a vector of maps like this:
    ```clojure
    (combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
       ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
    ```
 
-### rinnakkaisuutta ja transaktioita
+### concurrency and parallelism
 
-1. määrittele atomi `my-atom` joka sisältää arvon `4`
-1. hae `my-atom`in nykyinen arvo operaattorilla `@`
-1. päivitä `my-atom` arvoon `5` käyttämällä funktiota
-   `reset!`
-1. hae `my-atom`in nykyinen arvo funktiolla `deref`
-1. päivitä `my-atom`in sisältämä arvo arvoon `6` käyttämällä funktiota
-   `swap!`
-1. määrittele ref `my-ref` joka sisältää arvon `4`
-1. lue `my-ref`in arvo
-1. päivitä `my-ref` arvoon `5` käyttämällä funktiota `ref-set`
-   Huom: joudut käyttämään myös makroa `dosync`
-1. päivitä `my-ref` arvoon 6 käyttämällä funktiota `alter`
+Atoms and refs are one of the coolest features of clojure, enabling
+controlled mutation. This makes for safe & clear concurrent code.
+Unfortunately I only have some basic exercises here, nothing with
+concurrency.
 
-### lopuksi
+1. define an _atom_ called `counter` that contains the value `4`
+1. get the value of `counter` using the `@` operator
+1. update `counter` to the value `5` with the function `reset!`
+1. get the value of `counter` using the function `deref`
+1. update `counter` to the value `6` by using the function `swap!`
+   Hint: remember `inc`.
 
-Vähän hankalampia tehtäviä tarjolla osoitteessa http://4clojure.com
+1. define a _ref_ called `account` that contains the value `4`
+1. get the value of `account`
+1. update `account` to the value `5` with the function `ref-set`.
+   NB! you'll have to use the `dosync` macro
+1. update `account` to the value `6` with the function `alter`
+
+1. TODO: `pmap`, futures
+
+### what next?
+
+The website http://4clojure.com has lots of clojure exercises!
