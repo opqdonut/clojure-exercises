@@ -5,17 +5,11 @@ A bunch of simple exercises to get you started with Clojure.
 ## getting started
 
 To work on the exercises you need a clojure environment. Here are
-three recommended ways of getting one:
+two recommended ways of getting one:
 
 - Work on the exercises online at http://tryclj.com
 - Nightcode is a nice and easy clojure IDE that you can install on
   Windows, OS X or Linux: https://sekao.net/nightcode/
-- Or you can just simply download clojure from http://clojure.org
-  and run it in your terminal for example like this:
-  
-  ```
-  rlwrap java -jar clojure-1.8.0.jar
-  ```
 
 ## useful stuff
 
@@ -34,6 +28,7 @@ To work on the exercises you'll need to refer to these materials:
 
 1. define a _vector_ with the elements `1`, `"hello"` and `true`
 1. define a vector that contains the _keywords_ `:diff` and `:merge`
+
 1. define a _map_ with the key `1` is associated with the value `"hello"` and the key `:key`
    with the value `[13 7]`
 
@@ -41,6 +36,7 @@ To work on the exercises you'll need to refer to these materials:
    Use the `assoc` function to add a new key and value to `my-map`. What does
    the `assoc` call return?  What is the value of `my-map` after the call?
 
+1. use `conj` to add a value to a vector
 1. use the function `get` to get the second element from a vector
 1. use the function `get` to get the value of a key from a map
 1. get the value of a key from a map using the map itself as a function
@@ -58,10 +54,11 @@ To work on the exercises you'll need to refer to these materials:
 1. use `defn` to define a function hello that works like this: `(hello) ==> "hello!"`
 1. define a function `double` that works like this: `(double 5) ==> 10`, `(double 1) ==> 2`
 1. add a _docstring_ to the function `double`. Then show it using `(doc double)`.
+1. challenge! implement a `factorial` function using recursion.
 
-1. TODO: let, loop
+### conditionals & structures
 
-### conditionals
+1. TODO: let
 
 1. define a function `small?` that returns `true` for numbers under 100
 1. define a function `message!` that has three cases:
@@ -76,7 +73,8 @@ To work on the exercises you'll need to refer to these materials:
 1. reimplement `message!` using the `cond` structure
 1. reimplement `message!` using the `case` structure
 
-1. TODO?
+1. challenge! use the `loop` structure to add `1` to an empty vector until it has 10 elements.
+   Note: `loop` can be hard. Don't get stuck on this exercise!
 
 ### functional programming?
 
@@ -84,18 +82,17 @@ To work on the exercises you'll need to refer to these materials:
    the `map` funktiota. Hint: the function `inc`
 1. do the same as in the previous exercise, but leave only the even results in the vector.
    Use the functions `filter` and `even?`
-
-1. TODO
-
-1. Use the funection `update-in` to change 3 into 4 in the value below:
+1. use the `for` structure to go through this vector of maps:
+   ```clojure
+   [{:id 1 :value 7.0} {:id 2 :value 3.0} {:id 7 :value 1.1}]
+   ```
+   and return a sequence of the `:value`s: `(7.0 3.0 1.1)`
+1. Use the function `update-in` to change 3 into 4 in the value below:
    ```clojure
    {:shops [:shop-1]
     :customers [{:id "Pekka"
                  :account {:balance 3}}]}
    ```
-
-1. TODO
-
 1. challenge! use the `reduce` function to combine a vector of maps like this:
    ```clojure
    (combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
