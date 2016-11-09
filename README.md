@@ -15,6 +15,8 @@ two recommended ways of getting one:
 
 To work on the exercises you'll need to refer to these materials:
 
+- https://www.cis.upenn.edu/~matuszek/Concise%20Guides/Concise%20Clojure.html --
+  this nice cheat sheet
 - http://clojuredocs.org -- documentation for clojure functions (with examples!)
 - http://clojure.org/reference -- long-form documentation about clojure concepts
 
