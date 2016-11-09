@@ -1,61 +1,63 @@
-# clojure-harjoituksia
+# clojure-exercises
 
-Kasa yksinkertaisia harjoituksia joilla pääset alkuun Clojuren kanssa.
+A bunch of simple exercises to get you started with Clojure.
 
-## näin pääset koodaamaan
+## getting started
 
-Tarvitset harjoituksia tehdäksesi clojure-ympäristön. Tähän on pari eri vaihtoehtoa:
+To work on the exercises you need a clojure environment. Here are
+three recommended ways of getting one:
 
-- Voit tehdä tehtäviä netissä: http://tryclj.com
-- Nightcode on helppo ja toimiva clojure-IDE jonka voit asentaa
-  Windowsille, OS X:lle tai Linuxille: https://sekao.net/nightcode/
-- Voit vain ladata clojuren jar-muodossa virallisilta sivuilta
-  (http://clojure.org) ja ajaa sitä vaikka Linuxissa näin:
+- Work on the exercises online at http://tryclj.com
+- Nightcode is a nice and easy clojure IDE that you can install on
+  Windows, OS X or Linux: https://sekao.net/nightcode/
+- Or you can just simply download clojure from http://clojure.org
+  and run it in your terminal for example like this:
   
   ```
   rlwrap java -jar clojure-1.8.0.jar
   ```
 
-## hyödyllisiä materiaaleja
+## useful stuff
 
-Tarvitset harjoitusten tekemiseen seuraavia materiaaleja:
+To work on the exercises you'll need to refer to these materials:
 
-- http://clojuredocs.org -- clojure-funktioitten dokumentaatio ja esimerkkejä
-- http://clojure.org/reference -- pitempää dokumentaatiota joka selittää clojure-käsitteitä
+- http://clojuredocs.org -- documentation for clojure functions (with examples!)
+- http://clojure.org/reference -- long-form documentation about clojure concepts
 
-## harjoitukset
+## exercises
 
-### syntaksi
+### syntax
 
-1. laske `(3+4/5)*6`
-1. kutsu funktiota `get` argumenteilla `"ciao"` ja `1`
+1. compute `1+1`
+1. call the function `get` with arguments `"ciao"` and `1`
+1. compute `(3+4/5)*6`
 
-1. määrittele vektori jossa on elementit `1`, `"moi"` ja `true`
-1. määrittele vektori joka sisältää keywordit `:diff` ja `:merge`
-1. määrittele map jossa avain `1` liittyy arvoon `"hei"` ja avain `:key`
-   arvoon `[13 7]`
+1. define a _vector_ with the elements `1`, `"hello"` and `true`
+1. define a vector that contains the _keywords_ `:diff` and `:merge`
+1. define a _map_ with the key `1` is associated with the value `"hello"` and the key `:key`
+   with the value `[13 7]`
 
-1. määrittele muuttuja `my-map` joka sisältää mapin `{1 2}`. Lisää
-   `my-map`piin `assoc`-funktiolla uusi avain ja arvo. Mitä `assoc`-funktio
-   palauttaa? Mikä on `my-map` muuttujan arvo tämän jälkeen?
+1. use `def` to define a _variable_ `my-map` that refers to the map `{1 2}`.
+   Use the `assoc` function to add a new key and value to `my-map`. What does
+   the `assoc` call return?  What is the value of `my-map` after the call?
 
-1. käytä funktiota `get` hakemaan vektorin toinen alkio
-1. käytä funktiota `get` hakemaan mapista avain
-1. hae mapista avain käyttämällä itse mappia funktiona
-1. hae mapista avain käyttämällä keywordiä funktiona 
+1. use the function `get` to get the second element from a vector
+1. use the function `get` to get the value of a key from a map
+1. get the value of a key from a map using the map itself as a function
+1. get the value of a key from a map using a keyword as a function
 
-1. Käytä funktiota get-in noutamaan arvo `:aarre` arvosta:
+1. use the function `get-in` to fetch the value `:treasure` from the value:
 
    ```clojure
-   {:kuvaus "luolasto"
-    :risteys [{:sisalto :hirvio}
-              nil
-              {:sisalto [:hely :aarre]}]}
+   {:description "cave"
+    :crossroads [{:contents :monster}
+                 nil
+                 {:contents [:trinket :treasure]}]}
    ```
 
-1. tee funktio hello joka toimii näin: `(hello) ==> "hello!"`
-1. tee funktio tupla joka toimii näin: `(tupla 5) ==> 10, (tupla 1) ==> 2`
-
+1. use `defn` to define a function hello that works like this: `(hello) ==> "hello!"`
+1. define a function `double` that works like this: `(double 5) ==> 10`, `(double 1) ==> 2`
+1. add a _docstring_ to the function `double`. Then show it using `(doc double)`.
 1. TODO
 
 ### kontrollirakenteet
