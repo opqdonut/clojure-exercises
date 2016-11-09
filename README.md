@@ -58,8 +58,8 @@ To work on the exercises you'll need to refer to these materials:
 
 ### conditionals & structures
 
-1. TODO: let
-
+1. use the `let` structure to define a local variable `b` with the value `"bork"`.
+   Then use the `str` function to combine two `b`s into `"borkbork"`.
 1. define a function `small?` that returns `true` for numbers under 100
 1. define a function `message!` that has three cases:
 
@@ -119,7 +119,7 @@ concurrency.
    NB! you'll have to use the `dosync` macro
 1. update `account` to the value `6` with the function `alter`
 
-1. TODO: `pmap`, futures
+1. TODO: `pmap`, futures?
 
 ### what next?
 
