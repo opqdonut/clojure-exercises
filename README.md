@@ -44,7 +44,7 @@ To work on the exercises you'll need to refer to these materials:
 1. get the value of a key from a map using the map itself as a function
 1. get the value of a key from a map using a keyword as a function
 
-1. use the function `get-in` to fetch the value `:treasure` from the value:
+1. use the function `get-in` to return the value `:treasure` from the value:
 
    ```clojure
    {:description "cave"
