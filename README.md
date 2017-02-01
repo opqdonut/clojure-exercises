@@ -46,12 +46,12 @@ To work on the exercises you'll need to refer to these materials:
 
 1. use the function `get-in` to return the value `:treasure` from the value:
 
-   ```clojure
-   {:description "cave"
-    :crossroads [{:contents :monster}
-                 nil
-                 {:contents [:trinket :treasure]}]}
-   ```
+    ```clojure
+    {:description "cave"
+     :crossroads [{:contents :monster}
+                  nil
+                  {:contents [:trinket :treasure]}]}
+    ```
 
 1. use `defn` to define a function hello that works like this: `(hello) ==> "hello!"`
 1. define a function `double` that works like this: `(double 5) ==> 10`, `(double 1) ==> 2`
@@ -65,11 +65,11 @@ To work on the exercises you'll need to refer to these materials:
 1. define a function `small?` that returns `true` for numbers under 100
 1. define a function `message!` that has three cases:
 
-   ```clojure
-   (message! :boink) ==> "Boink!"
-   (message! :pig)   ==> "oink"
-   (message! :ping)  ==> "pong"
-   ```
+    ```clojure
+    (message! :boink) ==> "Boink!"
+    (message! :pig)   ==> "oink"
+    (message! :ping)  ==> "pong"
+    ```
 
 1. reimplement `message!` using the `if` structure
 1. reimplement `message!` using the `cond` structure
@@ -85,21 +85,26 @@ To work on the exercises you'll need to refer to these materials:
 1. do the same as in the previous exercise, but leave only the even results in the vector.
    Use the functions `filter` and `even?`
 1. use the `for` structure to go through this vector of maps:
-   ```clojure
-   [{:id 1 :value 7.0} {:id 2 :value 3.0} {:id 7 :value 1.1}]
-   ```
+
+    ```clojure
+    [{:id 1 :value 7.0} {:id 2 :value 3.0} {:id 7 :value 1.1}]
+    ```
+
    and return a sequence of the `:value`s: `(7.0 3.0 1.1)`
 1. Use the function `update-in` to change 3 into 4 in the value below:
-   ```clojure
-   {:shops [:shop-1]
-    :customers [{:id "Pekka"
-                 :account {:balance 3}}]}
-   ```
+
+    ```clojure
+    {:shops [:shop-1]
+     :customers [{:id "Pekka"
+                  :account {:balance 3}}]}
+    ```
+
 1. challenge! use the `reduce` function to combine a vector of maps like this:
-   ```clojure
-   (combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
-      ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
-   ```
+
+    ```clojure
+    (combine [{:a 1 :b 2} {:c 3} {:d 4 :e 5}])
+       ==> {:a 1 :b 2 :c 3 :d 4 :e 5}
+    ```
 
 ### concurrency and parallelism
 
