@@ -5,9 +5,10 @@ A bunch of simple exercises to get you started with Clojure.
 ## getting started
 
 To work on the exercises you need a clojure environment. Here are
-two recommended ways of getting one:
+three recommended ways of getting one:
 
-- Work on the exercises online at http://tryclj.com
+- Work on the exercises online at http://clojurescript.io
+- If you want to start programming clojure for real, install Leiningen: https://leiningen.org
 - Nightcode is a nice and easy clojure IDE that you can install on
   Windows, OS X or Linux: https://sekao.net/nightcode/
 
